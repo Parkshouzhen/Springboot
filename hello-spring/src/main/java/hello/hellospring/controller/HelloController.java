@@ -31,10 +31,10 @@ public class HelloController {
 		return "hello" + name;
 	}
 
-	@GetMapping("hello-api")
+	@GetMapping("hello-api") 
 	@ResponseBody
-	public Hello helloApi(@RequestParam("name") String name) {
-		Hello hello = new Hello();
+	public Hello helloApi(@RequestParam("data") String name) {
+		Hello hello = new Hello(); //문자: StringConverter 객체: JsonConverter
 		hello.setName(name);
 		return hello;
 	}
