@@ -26,7 +26,7 @@ public class HelloController {
 	// data 라는 이름으로 String 형태로 파라미터값을 받음? 쿼리스트링 값 받음
 
 	@GetMapping("hello-string")
-	@ResponseBody // http body부의 데이터를 직접 넣어주겠다
+	@ResponseBody // http의 body부에 데이터를 직접 넣어주겠다
 	public String helloString(@RequestParam("data") String name) {
 		return "hello" + name;
 	}
